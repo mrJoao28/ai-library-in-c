@@ -56,10 +56,10 @@ def multiply_matrixes(matrix1 , matrix2):
     
     for row in matrix1:
         new_line = list()
-        sum = 0
         for column in range(num_columns(matrix2)):
+            sum = 0
             for i in range(num_lines(matrix2)):
-                sum += row[column]*matrix2[i][column]
+                sum += row[i]*matrix2[i][column]
             new_line.append(sum)
         new_matrix.append(new_line)
 
