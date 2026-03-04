@@ -54,15 +54,15 @@ def multiply_matrixes(matrix1 , matrix2):
     if (num_columns(matrix1) != num_lines(matrix2)):
         return "Formato invalido de ultiplicaçao"
     
-    for line in matrix1:
+    for row in matrix1:
         new_line = list()
-        for row in range(num_lines(matrix1)):
-            soma = 0
-            for i in range(num_columns(matrix1)):
-                soma+=line[i]*matrix2[i][row]
-            new_line.append(soma)
-        
+        sum = 0
+        for column in range(num_columns(matrix2)):
+            for i in range(num_lines(matrix2)):
+                sum += row[column]*matrix2[i][column]
+            new_line.append(sum)
         new_matrix.append(new_line)
+
 
     return new_matrix
 
