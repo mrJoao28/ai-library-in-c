@@ -88,6 +88,19 @@ def sub_matrix(matrix1 , matrix2):
             new_line.append(matrix1[row][column]-matrix2[row][column])
         new_matrix.append(new_line)
 
+def sqaure_matrix(nums , order):
+    if len(nums) != order**2:
+        return "erro de formataçao"
+    new_matrix = list();
+    counter =0;
+    for i in range(order):
+        new_line = list()
+        for l in range(order):
+            new_line.append(nums[counter])
+            counter+=1
+        new_matrix.append(new_line)
+
+
     return new_matrix
 
 
@@ -117,7 +130,10 @@ print("\n")
 for row in add_matrix(matrix1,matrix2):
     print(row)
 
+print("\n")
 
+for row in sqaure_matrix([2,3,4,5,6,7,8,9,2],3):
+    print(row)
 
 
     
