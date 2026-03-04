@@ -66,6 +66,30 @@ def multiply_matrixes(matrix1 , matrix2):
 
     return new_matrix
 
+def add_matrix(matrix1 , matrix2):
+    if num_lines(matrix1)!=num_lines(matrix2) or num_columns(matrix1) != num_columns(matrix2):
+        return "formato invalido"
+    new_matrix = list()
+    for row in range(num_lines(matrix1)):
+        new_line = list()
+        for column in range(num_columns(matrix1)):
+            new_line.append(matrix1[row][column]+matrix2[row][column])
+        new_matrix.append(new_line)
+
+    return new_matrix
+
+def sub_matrix(matrix1 , matrix2):
+    if num_lines(matrix1)!=num_lines(matrix2) or num_columns(matrix1) != num_columns(matrix2):
+        return "formato invalido"
+    new_matrix = list()
+    for row in range(num_lines(matrix1)):
+        new_line = list()
+        for column in range(num_columns(matrix1)):
+            new_line.append(matrix1[row][column]-matrix2[row][column])
+        new_matrix.append(new_line)
+
+    return new_matrix
+
 
 
 
@@ -88,6 +112,11 @@ for row in matrix2:
 print("\n")
 for row in multiply_matrix:
     print(row)
+
+print("\n")
+for row in add_matrix(matrix1,matrix2):
+    print(row)
+
 
 
 
