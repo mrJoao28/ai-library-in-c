@@ -71,10 +71,10 @@ def multiply_matrixes(matrix1 , matrix2):
 
 
 
-matrix1 = create_matrix(nums=[1,2,100,4,5,6,7,2], length=2 , width=4)
-matrix2 = create_matrix(nums=[4,3,2,1], length=2 , width=2)
+matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
+matrix2 = create_matrix(nums=[83, 417, 29, 906, 512, 64, 738, 201, 945, 37, 684, 158, 799, 22, 560, 311, 874, 90, 447, 6, 721, 259, 998, 134], length=6 , width=4)
 
-new_matrix = redefine_matrix(matrix = matrix1 , width = 3 , length=5)
+#new_matrix = redefine_matrix(matrix = matrix1 , width = 3 , length=5)
 
 multiply_matrix = multiply_matrixes(matrix1 , matrix2)
 
