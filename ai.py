@@ -141,6 +141,6 @@ for row in matrix_square:
     print(row)
 
 
-print(det_matrix(matrix_square))
+
     
             
