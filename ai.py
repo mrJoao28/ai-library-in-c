@@ -158,15 +158,6 @@ def det_matrix(matrix):
 
     
 
-    
-
-[1,2,3,4,5]
-[6,7,8,9,10]
-[1,3,4,5,7]
-[0,9,7,6,5]
-[3,4,5,6,7]
-
-
 
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
@@ -175,6 +166,7 @@ matrix2 = create_matrix(nums=[83, 417, 29, 906, 512, 64, 738, 201, 945, 37, 684,
 #new_matrix = redefine_matrix(matrix = matrix1 , width = 3 , length=5)
 
 multiply_matrix = multiply_matrixes(matrix1 , matrix2)
+matrix_square = sqaure_matrix([100,100,5,4,5,4,7,8,100,34,3,2,3,2,989,45] , 4)
 
 for row in matrix1:
     print(row)
@@ -197,5 +189,6 @@ for row in sqaure_matrix([2,3,4,5,6,7,8,9,2],3):
     print(row)
 
 
+print(det_matrix(matrix_square))
     
             
