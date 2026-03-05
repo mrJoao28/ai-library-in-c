@@ -103,6 +103,12 @@ def sqaure_matrix(nums , order):
 
     return new_matrix
 
+def div_matrix(matrix , num):
+    for r,row in enumerate(matrix):
+        for n in range(len(row)):
+            matrix[r][n] /= num
+    return matrix
+
 def maximum(nums , min):
     result = list()
     for num in nums:
@@ -132,17 +138,18 @@ def neural_network(nums, weigth1 , weigth2 , acctivate_value ,bias ):
 
     return data
     
-    
+  
 
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
 matrix2 = create_matrix(nums=[83, 417, 29, 906, 512, 64, 738, 201, 945, 37, 684, 158, 799, 22, 560, 311, 874, 90, 447, 6, 721, 259, 998, 134], length=6 , width=4)
 matrix3 = sqaure_matrix([1,2,3,4,5,6,7,8,9],3)
 #new_matrix = redefine_matrix(matrix = matrix1 , width = 3 , length=5)
+matrix3 = div_matrix(matrix3 , 255)
 
 multiply_matrix = multiply_matrixes(matrix1 , matrix2)
-matrix_square = sqaure_matrix([100,100,5,4,5,4,7,8,100,34,3,2,3,2,989,45] , 4)
-
+matrix_square = sqaure_matrix([100,100,5,4,5,4,7,8,100,34,3,2,3,2,200,45] , 4)
+matirx_square = div_matrix(matrix_square,255)
 for row in matrix1:
     print(row)
 
@@ -170,5 +177,5 @@ for row in matrix_square:
 
 
 print("\n")
-print(neural_network(nums=matrix3 , weigth1=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9] , weigth2=[0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1] , bias=2 , acctivate_value=0.67) )
+print(neural_network(nums=matrix3 , weigth1=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9] , weigth2=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9] , bias=0.5 , acctivate_value=2) )
             
