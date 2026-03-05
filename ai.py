@@ -103,20 +103,59 @@ def sqaure_matrix(nums , order):
 
     return new_matrix
 
+
+
 def det_matrix(matrix):
+    det = 1
     if (num_columns(matrix) != num_lines(matrix)):
         return "erro de formato"
-    det = 0
-    if num_lines(matrix) ==2:
-        return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
     
+    while True:
 
-    slice_matrix1 = matrix[0]
-    slice_matrix2 = matrix[1:]
-    while num_columns(slice_matrix2) !=3:
-        det_matrix(slice_matrix2)
+        if num_lines(matrix) ==1:
+            return matrix[0][0]
+        
+        if num_lines(matrix) ==2:
+            return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
+        
+        if num_lines(matrix) == 3:
+            return matrix[0][0]*(matrix[1][1]*matrix[2][2] - matrix[1][2]*matrix[2][1]) - matrix[0][1]*(matrix[1][0]*matrix[2][2] - matrix[1][2]*matrix[2][0]) + matrix[0][2]*(matrix[1][0]*matrix[2][1] - matrix[1][1]*matrix[2][0])
+        
+        first_line = matrix[0]
+        first_column = redefine_matrix(matrix=matrix , length=num_lines(matrix) , width=num_columns(matrix))[0]
 
-    return matrix[0][0]*(matrix[1][1]*matrix[2][2] - matrix[1][2]*matrix[2][1]) - matrix[0][1]*(matrix[1][0]*matrix[2][2] - matrix[1][2]*matrix[2][0]) + matrix[0][2]*(matrix[1][0]*matrix[2][1] - matrix[1][1]*matrix[2][0])
+        nums = list()
+        if first_line[0] == 0:
+            for i in range(len(first_line)):
+                first_line[i] +=1
+                if det != 1 :
+                    det+=1
+            first_column[0] = 1
+        
+        elif first_line[0] !=1:
+            for num in first_line:
+                num/= first_line[0]
+                if det==0:
+                    det = 1/first_line[0]
+            first_column[0] = 1
+
+            det /=first_line[0]
+
+        for row in matrix:
+            for num in row:
+                if num not in first_line and num not in first_column:
+                    nums.append(num)
+
+        new_matrix = create_matrix(nums=nums , length=num_columns(matrix)-1 , width=num_lines(matrix)-1)
+
+
+        for l,line in enumerate(first_column[1:]):
+            for i ,column in enumerate(first_line[1:]):
+                new_matrix[l][i] -= line*column
+
+        matrix = new_matrix
+
+
     
 
     
