@@ -112,7 +112,27 @@ def maximum(nums , min):
             result.append(num)
     return result
 
+def neural_network(nums, weigth1 , weigth2 , acctivate_value ,bias ):
+    data = list()
+    for num in nums:
+        for n in num:
+            data.append(n)
+    if len(weigth1) != len(data) or len(weigth2) != len(data):
+        return "quantidade invalida"
 
+    for i in range(len(data)):
+        data[i] = data[i]*weigth1[i] + bias
+
+    data = maximum(data , acctivate_value)
+
+    for i in range(len(data)):
+        data[i] = data[i]*weigth2[i] +bias
+
+    data = maximum(data , acctivate_value)
+
+    return data
+    
+    
 
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
