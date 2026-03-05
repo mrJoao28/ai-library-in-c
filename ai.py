@@ -137,7 +137,7 @@ def neural_network(nums, weigth1 , weigth2 , acctivate_value ,bias ):
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
 matrix2 = create_matrix(nums=[83, 417, 29, 906, 512, 64, 738, 201, 945, 37, 684, 158, 799, 22, 560, 311, 874, 90, 447, 6, 721, 259, 998, 134], length=6 , width=4)
-
+matrix3 = sqaure_matrix([1,2,3,4,5,6,7,8,9],3)
 #new_matrix = redefine_matrix(matrix = matrix1 , width = 3 , length=5)
 
 multiply_matrix = multiply_matrixes(matrix1 , matrix2)
@@ -169,5 +169,6 @@ for row in matrix_square:
 
 
 
-    
+print("\n")
+print(neural_network(nums=matrix3 , weigth1=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9] , weigth2=[0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1] , bias=2 , acctivate_value=0.67) )
             
