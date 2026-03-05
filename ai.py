@@ -103,11 +103,11 @@ def sqaure_matrix(nums , order):
 
     return new_matrix
 
-def maximum(nums):
+def maximum(nums , min):
     result = list()
     for num in nums:
         if num <=0:
-            result.append(0)
+            result.append(min)
         else:
             result.append(num)
     return result
