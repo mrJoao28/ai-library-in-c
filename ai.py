@@ -103,32 +103,8 @@ def sqaure_matrix(nums , order):
 
     return new_matrix
 
-def det_matrix(matrix):
-    n = len(matrix)
-    det = 1
 
-    for i in range(n):
 
-        if matrix[i][i] == 0:
-            for j in range(i+1, n):
-                if matrix[j][i] != 0:
-                    matrix[i], matrix[j] = matrix[j], matrix[i]
-                    det *= -1
-                    break
-            else:
-                return 0
-
-        pivot = matrix[i][i]
-        det *= pivot
-
-        for j in range(i+1, n):
-            factor = matrix[j][i] / pivot
-            for k in range(i, n):
-                matrix[j][k] -= factor * matrix[i][k]
-
-    return det
-
-    
 
 
 
