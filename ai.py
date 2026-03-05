@@ -103,7 +103,29 @@ def sqaure_matrix(nums , order):
 
     return new_matrix
 
+def det_matrix(matrix):
+    if (num_columns(matrix) != num_lines(matrix)):
+        return "erro de formato"
+    det = 0
+    if num_lines(matrix) ==2:
+        return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
+    
 
+    slice_matrix1 = matrix[0]
+    slice_matrix2 = matrix[1:]
+    while num_columns(slice_matrix2) !=3:
+        det_matrix(slice_matrix2)
+
+    return matrix[0][0]*(matrix[1][1]*matrix[2][2] - matrix[1][2]*matrix[2][1]) - matrix[0][1]*(matrix[1][0]*matrix[2][2] - matrix[1][2]*matrix[2][0]) + matrix[0][2]*(matrix[1][0]*matrix[2][1] - matrix[1][1]*matrix[2][0])
+    
+
+    
+
+[1,2,3,4,5]
+[6,7,8,9,10]
+[1,3,4,5,7]
+[0,9,7,6,5]
+[3,4,5,6,7]
 
 
 
