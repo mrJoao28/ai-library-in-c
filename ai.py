@@ -138,7 +138,7 @@ def neural_network(nums, weigth1 , weigth2 , acctivate_value ,bias ):
 
     return data
     
-  
+
 
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
