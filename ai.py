@@ -144,6 +144,9 @@ def det_matrix(matrix):
 
     if (num_lines(matrix) != num_columns(matrix)):
         return "formato de matrix invalido"
+
+    if (num_lines(matrix) == 1):
+        return matrix[0][0]
     
     if (num_lines(matrix) ==2):
         return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
