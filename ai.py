@@ -160,9 +160,9 @@ def det_matrix(matrix):
     first_line = matrix[0][1:]
     for i in range(first_line):
         first_line[i] /= first_element
-    
+
     det /= matrix[0][0]
-    
+
     matrix = matrix[1:]
 
     first_column = list()
