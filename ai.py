@@ -141,6 +141,7 @@ def neural_network(nums, weigth1 , weigth2 , acctivate_value ,bias ):
 
 def det_matrix(matrix):
     det = 1
+    
 
     if (num_lines(matrix) != num_columns(matrix)):
         return "formato de matrix invalido"
@@ -150,6 +151,8 @@ def det_matrix(matrix):
     
     elif (num_lines(matrix) ==2):
         return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
+    
+    
     
     if matrix[0][0]==0:
         for num in range(matrix[0]):
@@ -178,8 +181,8 @@ def det_matrix(matrix):
             matrix[r][c] =  (matrix[r][c] - first_line[r]*first_column[r])*(det**(-1))
 
 
-
-    return matrix,det
+    det_matrix(matrix)
+    
 
 
 
