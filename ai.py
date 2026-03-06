@@ -155,10 +155,11 @@ def det_matrix(matrix):
         for num in range(matrix[0]):
             matrix[0][num]+=1
 
+    first_element = matrix[0][0]
 
     first_line = matrix[0][1:]
     for i in range(first_line):
-        first_line[i] /= matrix[0][0]
+        first_line[i] /= first_element
     
     det /= matrix[0][0]
     
@@ -170,14 +171,15 @@ def det_matrix(matrix):
         first_column.append(row[0])
         del matrix[i+1][0]
 
-    first_column[0] = first_column[0]/first_column[0]
-    
-    
+
+
     for r , row in enumerate(matrix):
         for c  in range(row):
-           matrix[r][c] =  matrix[r][c] - first_line[r]*first_column[r]
+            matrix[r][c] =  (matrix[r][c] - first_line[r]*first_column[r])*(det**(-1))
 
-    return matrix
+
+
+    return matrix,det
 
 
 
