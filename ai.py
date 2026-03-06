@@ -139,6 +139,28 @@ def neural_network(nums, weigth1 , weigth2 , acctivate_value ,bias ):
     return data
     
 
+def det_matrix(matrix):
+    det = 1
+
+    if (num_lines(matrix) != num_columns(matrix)):
+        return "formato de matrix invalido"
+    
+    if (num_lines(matrix) ==2):
+        return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
+    
+    for i , row in enumerate(matrix):
+        for l , n in enumerate(row):
+
+
+
+
+
+
+
+
+
+
+
 
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
