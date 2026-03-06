@@ -148,10 +148,30 @@ def det_matrix(matrix):
     if (num_lines(matrix) == 1):
         return matrix[0][0]
     
-    if (num_lines(matrix) ==2):
+    elif (num_lines(matrix) ==2):
         return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
     
     
+    first_line = matrix[0][1:]
+    for i in range(first_line):
+        first_line[i] /= first_line[0]
+    
+    matrix = matrix[1:]
+
+    first_column = list()
+    
+    for i,row in enumerate(matrix[1:]):
+        first_column.append(row[0])
+        del matrix[i+1][0]
+
+    first_column[0] = first_column[0]/first_column[0]
+    
+    
+    for r , row in enumerate(matrix):
+        for c  in range(row):
+           matrix[r][c] =  matrix[r][c] - first_line[r]*first_column[r]
+
+    return matrix
 
 
 
