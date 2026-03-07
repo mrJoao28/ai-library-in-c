@@ -172,7 +172,7 @@ def det_matrix(matrix):
     
     for i,row in enumerate(matrix[1:]):
         first_column.append(row[0])
-        del matrix[i+1][0]
+        del matrix[i][0]
 
 
 
