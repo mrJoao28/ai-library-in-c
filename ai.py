@@ -178,7 +178,10 @@ def det_matrix(matrix):
 
     for r , row in enumerate(matrix):
         for c  in range(len(row)):
-            matrix[r][c] =  (matrix[r][c] - first_line[r]*first_column[r])*(det**(-1))
+            matrix[r][c] =  (matrix[r][c] - first_line[r]*first_column[r])
+
+    for num in range(len(matrix[0])):
+        matrix[0][num] /= (det**(-1))
 
 
     return det_matrix(matrix)
