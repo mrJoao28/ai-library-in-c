@@ -161,7 +161,7 @@ def det_matrix(matrix):
     first_element = matrix[0][0]
 
     first_line = matrix[0][1:]
-    for i in range(first_line):
+    for i in range(len(first_line)):
         first_line[i] /= first_element
 
     det /= matrix[0][0]
@@ -177,11 +177,11 @@ def det_matrix(matrix):
 
 
     for r , row in enumerate(matrix):
-        for c  in range(row):
-            matrix[r][c] =  (matrix[r][c] - first_line[r]*first_column[r])*(det**(-1))
+        for c  in range(len(row)):
+            matrix[r][c] =  (matrix[r][c] - first_line[r]*first_column[r-1])*(det**(-1))
 
 
-    det_matrix(matrix)
+    return det_matrix(matrix)
     
 
 
@@ -222,4 +222,5 @@ for row in matrix_square:
 
 print("\n")
 print(neural_network(nums=matrix3 , weigth1=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9] , weigth2=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9] , bias=0.5 , acctivate_value=2) )
-            
+print("\n")
+print(det_matrix(matrix_square))
