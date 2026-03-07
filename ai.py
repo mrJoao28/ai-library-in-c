@@ -155,7 +155,7 @@ def det_matrix(matrix):
     
     
     if matrix[0][0]==0:
-        for num in range(matrix[0]):
+        for num in range(len(matrix[0])):
             matrix[0][num]+=1
 
     first_element = matrix[0][0]
