@@ -167,12 +167,9 @@ def det_matrix(matrix):
             if row[0] != 0:
                 new_line = matrix[0]
                 matrix[0] = matrix[i]
-                matrix[i] = matrix[0]
-
+                matrix[i] = new_line
+                det  *= -1
     
-    
-
-
     first_element = matrix[0][0]
 
     first_line = matrix[0][1:]
