@@ -166,8 +166,8 @@ def det_matrix(matrix):
             new_line = list()
             if row[0] != 0:
                 new_line = matrix[0]
-                matrix[0] = matrix[i]
-                matrix[i] = new_line
+                matrix[0] = matrix[i+1]
+                matrix[i+1] = new_line
                 det  *= -1
     
     first_element = matrix[0][0]
