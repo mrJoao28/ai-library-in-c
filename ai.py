@@ -161,13 +161,17 @@ def det_matrix(matrix):
         if counter == num_lines(matrix):
             return 0
         
+    if matrix[0][0] == 0 :
+        for i,row in enumerate(matrix[1:]):
+            new_line = list()
+            if row[0] != 0:
+                new_line = matrix[0]
+                matrix[0] = matrix[i]
+                matrix[i] = matrix[0]
 
     
     
-    
-    if matrix[0][0]==0:
-        for num in range(len(matrix[0])):
-            matrix[0][num]+=1
+
 
     first_element = matrix[0][0]
 
