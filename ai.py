@@ -151,6 +151,17 @@ def det_matrix(matrix):
     
     elif (num_lines(matrix) ==2):
         return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
+
+
+    for row in matrix:
+        counter =0 
+        for num in row:
+            if num == 0:
+                counter +=1
+        if counter == num_lines(matrix):
+            return 0
+        
+
     
     
     
