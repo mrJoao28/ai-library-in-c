@@ -190,10 +190,10 @@ def det_matrix(matrix):
 
     for r , row in enumerate(matrix):
         for c  in range(len(row)):
-            matrix[r][c] =  (matrix[r][c] - first_line[r]*first_column[r])
+            matrix[r][c] =  (matrix[r][c] - first_line[c]*first_column[r])
 
     for num in range(len(matrix[0])):
-        matrix[0][num] /= (det**(-1))
+        matrix[0][num] /= (det)
 
 
     return det_matrix(matrix)
@@ -208,7 +208,7 @@ matrix3 = div_matrix(matrix3 , 255)
 
 multiply_matrix = multiply_matrixes(matrix1 , matrix2)
 matrix_square = sqaure_matrix([100,100,5,4,5,4,7,8,100,34,3,2,3,2,200,45] , 4)
-matirx_square = div_matrix(matrix_square,255)
+
 for row in matrix1:
     print(row)
 
