@@ -31,7 +31,6 @@ def create_matrix(nums , length , width ):
         counter_line +=1
     return matrix
 
-
 def redefine_matrix(matrix , length , width):
     nums = list()
     for line in matrix:
@@ -138,7 +137,6 @@ def neural_network(nums, weigth1 , weigth2 , acctivate_value ,bias ):
 
     return data
     
-
 def det_matrix(matrix):
     det = 1
     
