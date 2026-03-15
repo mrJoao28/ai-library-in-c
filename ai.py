@@ -1,3 +1,5 @@
+import math
+
 """
 matrizes e tensores V
 redes neurais  
@@ -230,20 +232,26 @@ def sub_vector(vector_A , vector_B):
 
 
 #supondo que seja uma base ortnormal(simplificando contas)
-def dot_vector(vector_A,vector_B):
-    sum = 0
+
+def module_vector(vector):
+    module = 0 
+    for num in vector:
+        module += num**2
     
-    if len(vector_A) >= len(vector_B):
-        for i in range(len(vector_A)):
-            if vector_B[i] != None:
-                sum += vector_A[i]*vector_B[i]
+    return module**(1/2)
 
-    else:
-        for i in range(len(vector_B)):
-            if vector_A[i] != None:
-                sum += vector_A[i]*vector_B[i]
+def dot_vector(vector_A,vector_B,degress):
+    mod_vector_A = module_vector(vector_A)
+    mod_vector_B = module_vector(vector_B)
+    
+    return mod_vector_A*mod_vector_B*math.sin(degress)
 
-    return sum
+
+
+
+def cross_vector(vector_A , vector_B):
+    vector= list()
+
 
     
 
