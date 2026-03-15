@@ -229,6 +229,26 @@ def sub_vector(vector_A , vector_B):
     return sum_vector(vector_A,vector_B)
 
 
+#supondo que seja uma base ortnormal(simplificando contas)
+def dot_vector(vector_A,vector_B):
+    sum = 0
+    
+    if len(vector_A) >= len(vector_B):
+        for i in range(len(vector_A)):
+            if vector_B[i] != None:
+                sum += vector_A[i]*vector_B[i]
+
+    else:
+        for i in range(len(vector_B)):
+            if vector_A[i] != None:
+                sum += vector_A[i]*vector_B[i]
+
+    return sum
+
+    
+
+
+
 
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
