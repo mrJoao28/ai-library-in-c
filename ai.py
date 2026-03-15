@@ -256,7 +256,7 @@ def cross_vector(vector_A , vector_B ):
         if i ==0:
             vector.append(det_matrix(vector_A[i+1:],vector_B[i+1:]))
         elif i==1:
-            vector.append(-1*det_matrix([vector_A[0],vector_A[2]],[vector_B[0],vector_B[2]]))
+            vector.append(-1*det_matrix([vector_A[i-1],vector_A[i+1]],[vector_B[i-1],vector_B[i+1]]))
         elif i ==2:
             vector.append(det_matrix(vector_A[:i],vector_B[:i]))
 
