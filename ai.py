@@ -247,14 +247,26 @@ def dot_vector(vector_A,vector_B,degress):
     return mod_vector_A*mod_vector_B*math.sin(degress)
 
 
+def cross_vector(vector_A , vector_B ):
+    vector = list()
 
+    if len(vector_A) !=3 or len(vector_B)!=3:
+        return "invlaid format"
+    
+    for i in range(len(vector_A)):
+        if i ==0:
+            vector.append(det_matrix(vector_A[i+1:],vector_B[i+1:]))
+        elif i==1:
+            vector.append(-1*det_matrix([vector_A[0],vector_A[2]],[vector_B[0],vector_B[2]]))
+        elif i ==2:
+            vector.append(det_matrix(vector_A[:i],vector_B[:i]))
 
-def cross_vector(vector_A , vector_B):
-    vector= list()
-
-
+    return vector
     
 
+    
+[1,2,3]
+[1,2,3]
 
 
 
