@@ -219,8 +219,14 @@ def sum_vector(vector_A , vector_B):
     else:
         for i in range(len(vector_A)):
             vector.append(vector_A[i]+vector_B[i])
+    
+    return vector
         
-        
+def sub_vector(vector_A , vector_B):
+    for i in range(len(vector_B)):
+        vector_B[i] = -1*vector_B[i]
+
+    return sum_vector(vector_A,vector_B)
 
 
 
