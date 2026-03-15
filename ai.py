@@ -196,7 +196,11 @@ def det_matrix(matrix):
 
     return det_matrix(matrix)
     
-
+def creat_vector(nums):
+    vector = list()
+    for i in nums:
+        vector.append(i)
+    return vector
 
 matrix1 = create_matrix(nums=[47, 892, 15, 603, 274, 981, 36, 710, 58, 429, 166, 847, 92, 301, 654, 9, 777, 214, 590, 38], length=4 , width=5)
 matrix2 = create_matrix(nums=[83, 417, 29, 906, 512, 64, 738, 201, 945, 37, 684, 158, 799, 22, 560, 311, 874, 90, 447, 6, 721, 259, 998, 134], length=6 , width=4)
