@@ -262,6 +262,11 @@ def cross_vector(vector_A , vector_B ):
 
     return vector
     
+def mist_product(vector_A,vector_B,vector_C,degress):
+    if len(vector_A) != 3 or len(vector_B) != 3 or len(vector_C) != 3:
+        return "invalid format"
+
+    return dot_vector(cross_vector(vector_A,vector_B,degress),vector_C)
 
 
 
