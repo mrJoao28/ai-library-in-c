@@ -263,7 +263,19 @@ def cross_vector(vector_A , vector_B ):
     return vector
     
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
