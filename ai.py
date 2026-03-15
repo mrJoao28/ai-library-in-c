@@ -246,7 +246,6 @@ def dot_vector(vector_A,vector_B,degress):
     
     return mod_vector_A*mod_vector_B*math.sin(degress)
 
-
 def cross_vector(vector_A , vector_B ):
     vector = list()
 
@@ -265,8 +264,6 @@ def cross_vector(vector_A , vector_B ):
     
 
     
-[1,2,3]
-[1,2,3]
 
 
 
