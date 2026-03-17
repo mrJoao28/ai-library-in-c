@@ -230,7 +230,10 @@ def sub_vector(vector_A , vector_B):
 
     return sum_vector(vector_A,vector_B)
 
-
+def mult_scalar_vector(vector, num):
+    for a in range(len(vector)):
+        vector[a] = vector[a]*num
+    return vector
 #supondo que seja uma base ortnormal(simplificando contas)
 
 def module_vector(vector):
@@ -267,7 +270,6 @@ def mist_product(vector_A,vector_B,vector_C,degress):
         return "invalid format"
 
     return dot_vector(cross_vector(vector_A,vector_B,degress),vector_C)
-
 
 
 
