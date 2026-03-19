@@ -235,7 +235,9 @@ def mult_scalar_vector(vector, num):
         vector[a] = vector[a]*num
     return vector
 
+
 #supondo que seja uma base ortnormal(simplificando contas)
+
 
 def module_vector(vector):
     module = 0 
